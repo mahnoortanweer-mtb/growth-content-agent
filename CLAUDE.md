@@ -55,6 +55,8 @@ The agent will:
 - Post generation: see skills/post-generation.md
 - Slack workflow: see skills/slack-integration.md
 - Performance tracking: see skills/performance-tracking.md
+- **Internet research:** see skills/internet-research.md (NEW: add context from global EdTech trends)
 - Team info: see docs/team-roster.md
 - Trending topics: see docs/trending-topics.md
 - Post examples: see docs/post-templates.md
+- **EdTech insights:** see docs/internet-insights.md (NEW: verified market trends, educator sentiment, Taleemabad positioning)
