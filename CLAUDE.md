@@ -32,9 +32,23 @@ Posts rotate through team members:
 6. **Performance:** Track engagement to optimize future posts
 
 ## Rumi Connection
-- Status: [TO BE FILLED AFTER MCP SETUP]
-- Access: Read-only
+- Status: ⏳ PENDING MCP SETUP (see instructions below)
+- Access: Read-only (no write access)
 - Key metrics: User growth, engagement, retention, feature adoption
+- Schema: see docs/rumi-schema.md
+
+### MCP Setup Instructions
+In Claude Code, ask:
+```
+"Can you please set up an MCP for me? We need to connect to the Rumi database. 
+Please read the documentation online on how to set up an MCP connection. Let me know when you're ready."
+```
+
+The agent will:
+1. Ask for Rumi database credentials (host, port, database name, username, password)
+2. Configure the MCP connection
+3. Test by querying tables
+4. Document the schema in docs/rumi-schema.md
 
 ## Quick Reference
 - Rumi analysis: see skills/rumi-analysis.md
