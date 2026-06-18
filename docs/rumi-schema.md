@@ -1,92 +1,192 @@
 # Rumi Database Schema
 
-**Status:** TO BE FILLED AFTER MCP CONNECTION
+**Status:** ✅ CONNECTED via MCP (rumi-db)
+**Connected:** 2026-06-17
+**Database:** PostgreSQL via Supabase
+**Host:** aws-1-ap-southeast-1.pooler.supabase.com:6543
+**Total Tables:** 82 (37 relevant for post generation)
 
-This document outlines the Rumi database structure and which tables are relevant for post generation.
+---
 
-## Connection Details
-- **Database Type:** [PostgreSQL / MySQL — confirm after connection]
-- **Host:** [Connected via MCP]
-- **Connection Status:** [Pending — ask agent to confirm "Can you list the tables in Rumi?"]
+## Post-Relevant Tables (37 Total)
 
-## Core Tables (Post-Relevant)
+### User & Profile
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `users` | All user accounts (teachers, admins) | User growth, onboarding trends |
+| `students` | Student data | Student engagement, outcomes |
+| `student_lists` | Teacher's student rosters | Class size, teacher reach |
+| `teacher_progress` | Teacher skill/usage progress | Teacher adoption, improvement |
+| `teacher_facts` | Teacher profile data | Educator demographics, context |
 
-### users
-- Stores teacher and admin user data
-- **Key columns:** user_id, name, email, school_id, created_at, last_login
-- **Used for posts:** User growth metrics, new user onboarding
+### Lessons
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `lesson_plans` | Teacher-created lesson plans | Lesson Plans adoption, usage |
+| `lesson_plan_requests` | Requests for AI lesson plans | AI usage demand, feature popularity |
+| `homework_chapters` | Homework content | Student engagement with homework |
+| `pic_lp_sessions` | Picture-based lesson sessions | Visual learning engagement |
 
-### sessions
-- Stores user session data (logins, app usage, engagement)
-- **Key columns:** session_id, user_id, created_at, duration_minutes, features_used
-- **Used for posts:** Daily active users (DAU), engagement spikes, session trends
+### Assessments
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `quizzes` | Quiz content library | Assessment content growth |
+| `quiz_sessions` | Student quiz attempts | Assessment engagement, completion |
+| `quiz_answers` | Individual quiz answers | Learning outcomes, accuracy |
+| `reading_assessments` | Reading skill evaluations | Literacy improvement tracking |
+| `exam_templates` | Exam formats | Assessment variety |
+| `exam_submissions` | Student exam results | Student performance outcomes |
 
-### features
-- Stores information about Rumi features (Lesson Plans, Coaching, etc.)
-- **Key columns:** feature_id, feature_name, launch_date, description
-- **Used for posts:** Feature announcement data, context on feature launches
+### Videos
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `videos` | Video content library | Content library growth |
+| `video_requests` | Teacher video requests | Feature demand signals |
+| `student_video_feedback` | Student ratings on videos | Content quality feedback |
+| `audio_sessions` | Audio learning sessions | Audio engagement metrics |
 
-### feature_adoption
-- Tracks which users have adopted which features
-- **Key columns:** user_id, feature_id, first_used_date, usage_count, last_used_date
-- **Used for posts:** Feature adoption rates, adoption velocity, time-to-first-use
+### Interactive / Sessions
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `chat_sessions` | AI chat interactions | AI feature adoption |
+| `coaching_sessions` | Teacher coaching sessions | Coaching feature engagement |
+| `byof_sessions` | Bring-your-own-format sessions | Custom content usage |
+| `attendance_sessions` | Attendance tracking sessions | Regular usage/stickiness |
 
-### engagement_metrics
-- Daily engagement data per school/user
-- **Key columns:** date, school_id, active_users, sessions, avg_session_duration
-- **Used for posts:** Weekly/monthly engagement trends, week-over-week growth
+### Features
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `feature_permissions` | Feature access control | Feature rollout tracking |
+| `feature_suggestions` | User-submitted feature ideas | Community voice, product direction |
+| `user_feature_first_use` | First time a user used a feature | Adoption velocity, time-to-first-use |
 
-### retention
-- Cohort retention curves (what % of users from each cohort return)
-- **Key columns:** cohort_date, days_since_join, retention_rate, user_count
-- **Used for posts:** Retention curves, cohort analysis, stickiness metrics
+### Analytics
+| Table | Purpose | Post Angle |
+|-------|---------|------------|
+| `api_usage_log` | API call tracking | Usage volume, system health |
 
-### partnerships
-- Partnership and integration data
-- **Key columns:** partnership_id, partner_name, integration_type, launch_date, active_schools
-- **Used for posts:** Partnership announcements, ecosystem wins
+---
 
-## Supporting Tables
+## Key Query Patterns for Post Generation
 
-### schools
-- School/organization data
-- **Key columns:** school_id, school_name, region, student_count, teacher_count
-
-### events
-- Detailed event logs (feature usage, errors, etc.)
-- **Key columns:** event_id, event_type, user_id, timestamp, event_data
-
-## Data Freshness Notes
-
-**Update frequency (to confirm after connection):**
-- sessions: Real-time or hourly
-- users: Real-time
-- feature_adoption: Daily
-- engagement_metrics: Daily (usually updated overnight)
-- retention: Daily (updated end-of-day)
-- partnerships: On-demand (updated when new partnership launches)
-
-## Query Patterns for Post Generation
-
-### Daily Active Users
+### 1. User Growth (Week-over-Week)
 ```sql
-SELECT COUNT(DISTINCT user_id) as dau FROM sessions WHERE created_at >= NOW() - INTERVAL '1 day'
+SELECT 
+  DATE_TRUNC('week', created_at) as week,
+  COUNT(DISTINCT id) as new_users
+FROM users
+WHERE created_at >= NOW() - INTERVAL '14 days'
+GROUP BY DATE_TRUNC('week', created_at)
+ORDER BY week DESC;
 ```
 
-### Feature Adoption
+### 2. Lesson Plans Adoption
 ```sql
-SELECT feature_name, COUNT(DISTINCT user_id) as users, 
-  COUNT(DISTINCT user_id) * 100.0 / (SELECT COUNT(DISTINCT user_id) FROM users) as adoption_rate
-FROM feature_adoption f JOIN features ft ON f.feature_id = ft.feature_id
+SELECT 
+  COUNT(DISTINCT user_id) as teachers_using,
+  COUNT(*) as total_plans_created,
+  AVG(EXTRACT(EPOCH FROM (created_at - u.created_at))/86400) as avg_days_to_first_plan
+FROM lesson_plans lp
+JOIN users u ON lp.user_id = u.id
+WHERE lp.created_at >= NOW() - INTERVAL '30 days';
+```
+
+### 3. Feature First Use (Adoption Velocity)
+```sql
+SELECT 
+  feature_name,
+  COUNT(DISTINCT user_id) as users_adopted,
+  MIN(first_used_at) as first_adoption,
+  AVG(EXTRACT(EPOCH FROM (first_used_at - u.created_at))/86400) as avg_days_to_adopt
+FROM user_feature_first_use uff
+JOIN users u ON uff.user_id = u.id
 GROUP BY feature_name
+ORDER BY users_adopted DESC;
 ```
 
-### Weekly Retention
+### 4. Coaching Session Engagement
 ```sql
-SELECT cohort_date, days_since_join, retention_rate FROM retention
-WHERE cohort_date >= NOW() - INTERVAL '30 days'
+SELECT 
+  DATE_TRUNC('week', created_at) as week,
+  COUNT(*) as sessions,
+  COUNT(DISTINCT user_id) as unique_teachers
+FROM coaching_sessions
+WHERE created_at >= NOW() - INTERVAL '30 days'
+GROUP BY DATE_TRUNC('week', created_at)
+ORDER BY week DESC;
+```
+
+### 5. Quiz Completion Rates
+```sql
+SELECT 
+  COUNT(*) as total_attempts,
+  AVG(score) as avg_score,
+  COUNT(DISTINCT student_id) as unique_students
+FROM quiz_sessions
+WHERE created_at >= NOW() - INTERVAL '7 days';
+```
+
+### 6. Reading Assessment Improvement
+```sql
+SELECT 
+  DATE_TRUNC('month', assessment_date) as month,
+  AVG(score) as avg_reading_score,
+  COUNT(DISTINCT student_id) as students_assessed
+FROM reading_assessments
+WHERE assessment_date >= NOW() - INTERVAL '90 days'
+GROUP BY DATE_TRUNC('month', assessment_date)
+ORDER BY month DESC;
+```
+
+### 7. Video Engagement
+```sql
+SELECT 
+  COUNT(*) as total_sessions,
+  AVG(rating) as avg_rating,
+  COUNT(DISTINCT student_id) as unique_students
+FROM student_video_feedback
+WHERE created_at >= NOW() - INTERVAL '7 days';
+```
+
+### 8. Feature Suggestions (Community Voice)
+```sql
+SELECT 
+  suggestion_text,
+  COUNT(*) as votes,
+  COUNT(DISTINCT user_id) as unique_requesters
+FROM feature_suggestions
+GROUP BY suggestion_text
+ORDER BY votes DESC
+LIMIT 10;
 ```
 
 ---
 
-**Next step:** After MCP is connected, fill in the actual table structures, columns, and data freshness notes.
+## Data Freshness Notes
+- **users, students:** Real-time (immediate)
+- **lesson_plans, quiz_sessions, coaching_sessions:** Real-time
+- **reading_assessments, exam_submissions:** On completion
+- **user_feature_first_use:** Triggered on first use
+- **api_usage_log:** Real-time
+- **teacher_progress:** Updated on activity
+
+---
+
+## Post Generation Priority Tables
+
+**For Growth Product Managers (metrics & features):**
+- `user_feature_first_use` — adoption velocity
+- `lesson_plans` + `lesson_plan_requests` — Lesson Plans engagement
+- `quiz_sessions` + `quiz_answers` — Assessment outcomes
+- `coaching_sessions` — Coaching feature engagement
+
+**For Partnership Manager:**
+- `feature_permissions` — rollout by partner/school
+- `feature_suggestions` — community requests (partnership angle)
+- `users` + `students` — reach metrics
+
+**For Marketing Manager:**
+- `reading_assessments` — learning outcome stories
+- `student_video_feedback` — content quality signals
+- `teacher_progress` — teacher journey narratives
+- `attendance_sessions` — stickiness / daily active usage

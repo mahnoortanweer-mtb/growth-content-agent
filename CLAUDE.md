@@ -32,23 +32,19 @@ Posts rotate through team members:
 6. **Performance:** Track engagement to optimize future posts
 
 ## Rumi Connection
-- Status: ⏳ PENDING MCP SETUP (see instructions below)
-- Access: Read-only (no write access)
-- Key metrics: User growth, engagement, retention, feature adoption
+- Status: ✅ CONNECTED via MCP (registered as rumi-db)
+- Host: aws-1-ap-southeast-1.pooler.supabase.com:6543
+- Database: postgres (PostgreSQL via Supabase)
+- Access: Read-only
+- Tables: 82 total, 37 relevant for posts
 - Schema: see docs/rumi-schema.md
 
-### MCP Setup Instructions
-In Claude Code, ask:
-```
-"Can you please set up an MCP for me? We need to connect to the Rumi database. 
-Please read the documentation online on how to set up an MCP connection. Let me know when you're ready."
-```
-
-The agent will:
-1. Ask for Rumi database credentials (host, port, database name, username, password)
-2. Configure the MCP connection
-3. Test by querying tables
-4. Document the schema in docs/rumi-schema.md
+## Key Rumi Tables for Posts
+- User growth: `users`, `students`
+- Feature adoption: `user_feature_first_use`, `lesson_plans`, `lesson_plan_requests`
+- Engagement: `coaching_sessions`, `quiz_sessions`, `attendance_sessions`
+- Outcomes: `reading_assessments`, `exam_submissions`, `student_video_feedback`
+- Community: `feature_suggestions`
 
 ## Quick Reference
 - Rumi analysis: see skills/rumi-analysis.md
