@@ -21,13 +21,13 @@ Tuesday is always Mahnoor. The other 5 members rotate across Mon/Wed/Thu/Fri in 
 
 | Week | Mon | Tue | Wed | Thu | Fri | Out |
 |------|-----|-----|-----|-----|-----|-----|
-| 1 | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
-| 2 | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
-| 3 | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
-| 4 | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
-| 5 | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
+| 1 (Jun 23) | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
+| 2 (Jun 30) | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
+| 3 (Jul 7) | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
+| 4 (Jul 14) | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
+| 5 (Jul 21) | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
 
-Cycle started week of 2026-06-16 (Week 1). See docs/team-roster.md for full schedule.
+Cycle starts week of 2026-06-23 (Week 1). See docs/team-roster.md for full schedule.
 Note: Mahnoor approves all posts. On her own day (Tuesday), Slack message tags her only.
 
 ## Key Rules

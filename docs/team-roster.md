@@ -51,11 +51,11 @@ The other 5 members rotate across Mon/Wed/Thu/Fri — one person sits out each w
 
 | Week | Mon | Tue | Wed | Thu | Fri | Sits Out |
 |------|-----|-----|-----|-----|-----|---------|
-| 1 (Jun 16) | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
-| 2 (Jun 23) | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
-| 3 (Jun 30) | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
-| 4 (Jul 7) | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
-| 5 (Jul 14) | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
+| 1 (Jun 23) | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
+| 2 (Jun 30) | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
+| 3 (Jul 7) | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
+| 4 (Jul 14) | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
+| 5 (Jul 21) | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
 | (repeat) | | | | | | |
 
 ## Assignment Logic
