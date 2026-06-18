@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Write-Host 'Starting claim verification for: 86% of education organizations use generative AI'\")",
+      "Bash(curl -s \"https://www.facultyfocus.com/articles/teaching-with-technology-articles/designing-the-2026-classroom-emerging-learning-trends-in-an-ai-powered-education-system/\")",
+      "Bash(powershell -Command \"Write-Host 'Checking system access for web research'\")",
+      "Bash(powershell -NoProfile -Command ' *)",
+      "Bash(curl -s \"https://www.precedenceresearch.com/ai-in-education-market\")",
+      "Bash(curl -s \"https://www.grandviewresearch.com/industry-analysis/ai-education-market\")",
+      "Bash(curl -s \"https://www.statista.com/outlook/tmo/artificial-intelligence/artificial-intelligence-in-education\")",
+      "Bash(curl -s \"https://www.alliedmarketresearch.com/ai-in-education-market\")",
+      "WebFetch(domain:cdt.org)",
+      "Bash(powershell -Command ' *)",
+      "WebFetch(domain:blog.csba.org)",
+      "WebFetch(domain:www.govtech.com)",
+      "WebFetch(domain:www.ipsos.com)",
+      "Bash(git commit -m 'feat: add internet research capability for EdTech trend monitoring *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git commit -m 'feat: connect Rumi database via MCP and document real schema *)",
+      "Bash(git commit -m 'feat: connect Slack MCP and document real connection details *)",
+      "WebFetch(domain:hellorumi.ai)",
+      "Bash(git commit -m 'docs: add image generation design spec and session context *)",
+      "Bash(git commit -m ' *)",
+      "WebFetch(domain:logo.com)",
+      "Bash(python -c \"import matplotlib; import numpy; print\\('matplotlib', matplotlib.__version__\\); print\\('numpy', numpy.__version__\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -c \"import matplotlib; print\\('OK', matplotlib.__version__\\)\")",
+      "Bash(python \"d:/MTB'S AGENT/output/posts/images/../../../generate_templates.py\")",
+      "Bash(python -)",
+      "Bash(python output/generate_templates.py)",
+      "Read(//c/Users/Mahnoor Tanweer/.claude/**)"
+    ]
+  }
+}
