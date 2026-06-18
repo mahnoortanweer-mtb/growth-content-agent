@@ -4,11 +4,12 @@
 Send draft LinkedIn posts to Slack, tag Mahnoor + assigned team member, and manage the approval workflow (review, revise, approve).
 
 ## Prerequisites
-- MCP connection to Slack (configured in environment)
-- Team member Slack IDs (from docs/team-roster.md)
-- Mahnoor's Slack ID
+- MCP connection to Slack (registered as slack-rumi ✅ configured)
+- Workspace: Taleemabad (taleemabad-talk.slack.com)
+- Bot: growth_content_agent (U0BBGU4H2R0)
+- Channel: C0ATPQZV27M (#growth)
+- Team member Slack IDs (from docs/team-roster.md — fill in actual IDs)
 - Draft post is ready (from post-generation.md skill)
-- Slack channel for posts (#growth or designated channel)
 
 ## Instructions
 
@@ -133,8 +134,10 @@ What feature would you want us to ship next?
 | Multiple tweaks, no clear final version | **After each revision, ask: "Does this version look good?" Lock the version.** |
 
 ## Notes
-- **Slack channel:** Confirm your channel is #growth. If different, update this skill.
-- **Time zone:** Sends happen at [TBD — set time when automating]. Ensure team is online.
+- **Slack channel:** #growth — Channel ID: C0ATPQZV27M ✅ verified
+- **Bot name:** growth_content_agent (U0BBGU4H2R0)
+- **MCP name:** slack-rumi (use this when calling Slack tools)
+- **Time zone:** PKT (Pakistan Standard Time, UTC+5). Send during business hours.
 - **Threading:** Always keep approval in a thread (not main channel clutter).
 - **Emoji reactions:** Using simple emoji reactions (✅💬❌) is faster than typing.
 - **Escalation:** If 24 hours pass with no response, escalate to Mahnoor via DM.

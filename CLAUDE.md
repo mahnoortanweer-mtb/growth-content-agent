@@ -46,13 +46,21 @@ Posts rotate through team members:
 - Outcomes: `reading_assessments`, `exam_submissions`, `student_video_feedback`
 - Community: `feature_suggestions`
 
+## Slack Connection
+- Status: ✅ CONNECTED via MCP (registered as slack-rumi)
+- Workspace: Taleemabad (taleemabad-talk.slack.com)
+- Team ID: T0AGB7ATAE7
+- Bot: growth_content_agent (User ID: U0BBGU4H2R0)
+- Channel: C0ATPQZV27M (#growth)
+- Verified: 2026-06-17 — test message delivered successfully
+
 ## Quick Reference
 - Rumi analysis: see skills/rumi-analysis.md
 - Post generation: see skills/post-generation.md
 - Slack workflow: see skills/slack-integration.md
 - Performance tracking: see skills/performance-tracking.md
-- **Internet research:** see skills/internet-research.md (NEW: add context from global EdTech trends)
+- Internet research: see skills/internet-research.md
 - Team info: see docs/team-roster.md
 - Trending topics: see docs/trending-topics.md
 - Post examples: see docs/post-templates.md
-- **EdTech insights:** see docs/internet-insights.md (NEW: verified market trends, educator sentiment, Taleemabad positioning)
+- EdTech insights: see docs/internet-insights.md
