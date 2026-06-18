@@ -9,19 +9,21 @@ generates authentic content, coordinates via Slack for review and approval.
 - Team member feedback integration: Week 2+
 
 ## Team Roster
-- **Mahnoor Tanweer** (Owner/Approver) — All posts reviewed by Mahnoor
-- **Growth Product Manager 1** (Expertise: product adoption, feature launches)
-- **Growth Product Manager 2** (Expertise: product metrics, engagement)
-- **Growth Partnership Manager** (Expertise: integrations, partnerships)
-- **Growth Marketing Manager** (Expertise: campaigns, brand, audience growth)
+- **Mahnoor Tanweer Butt** `U0AUB6PTGE8` — Owner/Approver. Tagged on EVERY post.
+- **Waqas Tanveer** `U0ATVUT1RRU` — Growth Manager
+- **Zeest Qureshi** `U0AUHKZCXL0` — Senior Growth Manager
+- **Junaid Ali** `U0ATENTNF1D` — Growth Manager
+- **Amina Tayyub** `U0AV1PKR3NV` — Product Growth Manager
+- **Gul Perwasha** `U0AUA6DG415` — Growth Manager
 
 ## Daily Schedule
-Posts rotate through team members:
-- Day 1: Growth Product Manager 1
-- Day 2: Growth Product Manager 2
-- Day 3: Growth Partnership Manager
-- Day 4: Growth Marketing Manager
-- (Then repeat)
+5-day rotation (started 2026-06-16):
+- Day 1: Waqas Tanveer
+- Day 2: Zeest Qureshi
+- Day 3: Junaid Ali
+- Day 4: Amina Tayyub
+- Day 5: Gul Perwasha
+- (Then repeat — day = days_since_2026-06-16 % 5)
 
 ## Key Rules
 1. **Authenticity:** Posts sound like they're written by the team member, not generic AI

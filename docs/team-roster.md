@@ -1,50 +1,60 @@
 # Growth Team Roster
 
-## Team Members
+## Owner / Approver
 
-### Mahnoor Tanweer
-- **Role:** Growth Lead / Owner
-- **Responsibility:** Reviews and approves all posts
-- **Slack ID:** @mahnoor.tanweer (or @mahnoor — confirm in Slack)
-- **Focus:** Strategic direction
+### Mahnoor Tanweer Butt
+- **Role:** Growth Manager (Owner — reviews and approves ALL posts)
+- **Slack ID:** U0AUB6PTGE8
+- **Responsibility:** Every post tagged to Mahnoor for final approval before publishing
 
-### Growth Product Manager 1
-- **Name:** [TO BE FILLED]
-- **Slack ID:** [TO BE FILLED]
-- **Expertise:** Product adoption, feature launches, user onboarding
-- **Post Focus:** New features, adoption rates, user journey improvements
-- **Assigned Days:** Day 1, 5, 9, ... (every 4 days)
+---
 
-### Growth Product Manager 2
-- **Name:** [TO BE FILLED]
-- **Slack ID:** [TO BE FILLED]
-- **Expertise:** Product metrics, engagement, retention analysis
-- **Post Focus:** Growth metrics, engagement trends, retention insights
-- **Assigned Days:** Day 2, 6, 10, ... (every 4 days)
+## Posting Rotation (5-day cycle)
 
-### Growth Partnership Manager
-- **Name:** [TO BE FILLED]
-- **Slack ID:** [TO BE FILLED]
-- **Expertise:** Integrations, partnerships, ecosystem growth
-- **Post Focus:** Partnership announcements, integration wins, ecosystem updates
-- **Assigned Days:** Day 3, 7, 11, ... (every 4 days)
+### Day 1 — Waqas Tanveer
+- **Role:** Growth Manager
+- **Slack ID:** U0ATVUT1RRU
+- **Post Focus:** Growth strategy, team wins, process improvements, audience development
 
-### Growth Marketing Manager
-- **Name:** [TO BE FILLED]
-- **Slack ID:** [TO BE FILLED]
-- **Expertise:** Campaigns, brand, audience growth, messaging
-- **Post Focus:** Campaign results, audience insights, brand announcements
-- **Assigned Days:** Day 4, 8, 12, ... (every 4 days)
+### Day 2 — Zeest Qureshi
+- **Role:** Senior Growth Manager
+- **Slack ID:** U0AUHKZCXL0
+- **Post Focus:** Senior-level insights, growth strategy, cross-functional wins, market positioning
+
+### Day 3 — Junaid Ali
+- **Role:** Growth Manager
+- **Slack ID:** U0ATENTNF1D
+- **Post Focus:** Growth experiments, feature traction, user behaviour observations
+
+### Day 4 — Amina Tayyub
+- **Role:** Product Growth Manager
+- **Slack ID:** U0AV1PKR3NV
+- **Post Focus:** Product adoption metrics, feature launches, user onboarding, product-led growth
+
+### Day 5 — Gul Perwasha
+- **Role:** Growth Manager
+- **Slack ID:** U0AUA6DG415
+- **Post Focus:** Community growth, engagement, partnerships, educator stories
+
+---
 
 ## Assignment Logic
-- Posts rotate through team members in order
-- Each team member is assigned one day every 4 days
-- Posts are tailored to their expertise
-- Mahnoor always tagged for review
+- Posts rotate through 5 team members (Days 1–5, then repeat)
+- Mahnoor always tagged for review — she is NEVER the post author
+- Posts tailored to each person's expertise and role level
+- Zeest (Senior) gets more strategic/opinion-led framing
+- Amina (Product Growth) gets metric-heavy, feature-focused posts
 
 ## Slack Configuration
-- **Primary channel:** #growth (or TBD)
-- **Approval workflow:** Post draft sent as thread reply, reactions used for approval
+- **Primary channel:** #growth — Channel ID: C0ATPQZV27M
+- **Bot:** growth_content_agent (U0BBGU4H2R0)
+- **Approval workflow:**
   - ✅ = Approved, go ahead and post
   - 💬 = Want to tweak, will edit in thread
   - ❌ = Needs rework, feedback in thread
+- **Always tag:** Mahnoor (U0AUB6PTGE8) + assigned team member
+
+## Day Counter
+To find today's assigned poster, use this logic:
+- Day 1 of rotation started: 2026-06-16
+- Formula: days since start % 5 → 0=Waqas, 1=Zeest, 2=Junaid, 3=Amina, 4=Gul
