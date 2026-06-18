@@ -23,12 +23,15 @@ Use this doc when generating images for LinkedIn posts. Apply these guidelines t
 - Layout: structured, left-aligned, generous whitespace
 
 ### Colors
-| Role | Description | Hex (confirm from Canva) |
-|------|-------------|--------------------------|
-| Primary | Deep teal/green | TBD — check Canva brand kit |
-| Secondary | Warm orange/yellow | TBD — check Canva brand kit |
+| Role | Description | Hex |
+|------|-------------|-----|
+| Primary | Dark navy | #1A3C5E |
+| Accent | Warm orange | #F5821F |
 | Background | White | #FFFFFF |
-| Text | Near-black | #1A1A1A |
+| Text | Near-black | #1C1C1C |
+| Text muted | Gray | #6B7280 |
+
+> Note: Confirm exact hex codes against Canva Pro brand kit — update if different.
 
 ### Typography
 - **Headings:** Bold, modern sans-serif (confirm exact font from Canva)
@@ -52,13 +55,16 @@ Use this doc when generating images for LinkedIn posts. Apply these guidelines t
 - Simple iconography
 
 ### Colors
-| Role | Description | Hex (confirm from Canva) |
-|------|-------------|--------------------------|
-| Primary accent | Coral/red | TBD — check Canva brand kit |
-| Secondary | Blue | TBD — check Canva brand kit |
+| Role | Description | Hex |
+|------|-------------|-----|
+| Primary accent | Coral/red | #E85D3F |
+| Secondary | Blue | #2E86DE |
 | Background | White | #FFFFFF |
-| Text | Dark | #1A1A1A or #222222 |
-| Muted text | Light gray | TBD |
+| Text | Dark | #1C1C1C |
+| Text muted | Gray | #6B7280 |
+| Divider | Light gray | #E5E7EB |
+
+> Note: Confirm exact hex codes against Canva Pro brand kit — update if different.
 
 ### Typography
 - **Brand font:** Clean sans-serif (confirm from Canva)
@@ -116,13 +122,13 @@ Before using image generation in the agent workflow, complete these in Canva:
 
 - [ ] Add Taleemabad logo to brand kit
 - [ ] Add Rumi logo to brand kit
-- [ ] Confirm and add Taleemabad hex color codes
-- [ ] Confirm and add Rumi hex color codes (coral/red accent, blue secondary)
-- [ ] Set correct fonts for both brands
-- [ ] Create Template 1: Stat Card (both landscape + square)
-- [ ] Create Template 2: Quote Card (square)
-- [ ] Create Template 3: Announcement Card (landscape)
-- [ ] Share template links — add to skills/image-generation.md
+- [x] Create Template 1: Stat Card (1200x628) — output/posts/images/template-stat-card.png
+- [x] Create Template 2: Quote Card (1080x1080) — output/posts/images/template-quote-card.png
+- [x] Create Template 3: Announcement Card (1200x628) — output/posts/images/template-announcement-card.png
+- [x] matplotlib confirmed available (Python 3.12, matplotlib 3.11)
+- [ ] Confirm hex codes vs Canva Pro brand kit — update if different
+- [ ] Set correct fonts in Canva (current templates use DejaVu Sans as placeholder)
+- [ ] If Canva MCP available: recreate templates with actual brand fonts/logo
 
 ---
 
