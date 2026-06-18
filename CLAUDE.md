@@ -16,17 +16,19 @@ generates authentic content, coordinates via Slack for review and approval.
 - **Amina Tayyub** `U0AV1PKR3NV` — Product Growth Manager
 - **Gul Perwasha** `U0AUA6DG415` — Growth Manager
 
-## Daily Schedule
-6-day rotation (started 2026-06-16):
-- Day 1: Waqas Tanveer
-- Day 2: Zeest Qureshi
-- Day 3: Junaid Ali
-- Day 4: Amina Tayyub
-- Day 5: Gul Perwasha
-- Day 6: Mahnoor Tanweer Butt
-- (Then repeat — day = days_since_2026-06-16 % 6)
+## Weekly Schedule (Mon–Fri)
+Tuesday is always Mahnoor. The other 5 members rotate across Mon/Wed/Thu/Fri in a 5-week cycle (one person sits out each week).
 
-Note: Mahnoor approves all posts. On her own post day, Slack message tags her only.
+| Week | Mon | Tue | Wed | Thu | Fri | Out |
+|------|-----|-----|-----|-----|-----|-----|
+| 1 | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
+| 2 | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
+| 3 | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
+| 4 | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
+| 5 | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
+
+Cycle started week of 2026-06-16 (Week 1). See docs/team-roster.md for full schedule.
+Note: Mahnoor approves all posts. On her own day (Tuesday), Slack message tags her only.
 
 ## Key Rules
 1. **Authenticity:** Posts sound like they're written by the team member, not generic AI

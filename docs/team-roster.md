@@ -44,11 +44,25 @@
 
 ---
 
+## Weekly Schedule (Mon–Fri)
+
+Tuesday is fixed: **Mahnoor Tanweer Butt** every week.
+The other 5 members rotate across Mon/Wed/Thu/Fri — one person sits out each week.
+
+| Week | Mon | Tue | Wed | Thu | Fri | Sits Out |
+|------|-----|-----|-----|-----|-----|---------|
+| 1 (Jun 16) | Waqas | Mahnoor | Zeest | Amina | Junaid | Gul |
+| 2 (Jun 23) | Gul | Mahnoor | Waqas | Zeest | Amina | Junaid |
+| 3 (Jun 30) | Junaid | Mahnoor | Gul | Waqas | Zeest | Amina |
+| 4 (Jul 7) | Amina | Mahnoor | Junaid | Gul | Waqas | Zeest |
+| 5 (Jul 14) | Zeest | Mahnoor | Amina | Junaid | Gul | Waqas |
+| (repeat) | | | | | | |
+
 ## Assignment Logic
-- Posts rotate through all 6 team members (Days 1–6, then repeat)
+- Tuesday = Mahnoor every week, no exceptions
+- Other 4 days rotate through the remaining 5 members (5-week cycle)
 - Mahnoor always tagged for review on others' posts
-- On Mahnoor's own post day (Day 6), Slack message tags her only
-- Posts tailored to each person's expertise and role level
+- On Mahnoor's Tuesday, Slack message tags her only
 - Zeest (Senior) gets more strategic/opinion-led framing
 - Amina (Product Growth) gets metric-heavy, feature-focused posts
 
@@ -60,8 +74,4 @@
   - 💬 = Want to tweak, will edit in thread
   - ❌ = Needs rework, feedback in thread
 - **Always tag:** Mahnoor (U0AUB6PTGE8) + assigned team member
-
-## Day Counter
-To find today's assigned poster, use this logic:
-- Day 1 of rotation started: 2026-06-16
-- Formula: days since start % 6 → 0=Waqas, 1=Zeest, 2=Junaid, 3=Amina, 4=Gul, 5=Mahnoor
+- **Exception:** Mahnoor's Tuesday posts — tag Mahnoor only
