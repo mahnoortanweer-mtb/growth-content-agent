@@ -73,3 +73,4 @@ Note: Mahnoor approves all posts. On her own day (Tuesday), Slack message tags h
 - Post examples: see docs/post-templates.md
 - EdTech insights: see docs/internet-insights.md
 - Brand guidelines: see docs/brand-guidelines.md
+- Rumi brand brief: see docs/rumi-brand-brief.md
