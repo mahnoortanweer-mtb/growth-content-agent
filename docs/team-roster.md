@@ -36,11 +36,18 @@
 - **Slack ID:** U0AUA6DG415
 - **Post Focus:** Community growth, engagement, partnerships, educator stories
 
+### Day 6 — Mahnoor Tanweer Butt
+- **Role:** Growth Manager (also Owner/Approver)
+- **Slack ID:** U0AUB6PTGE8
+- **Post Focus:** Strategic direction, team culture, big-picture EdTech observations, mission-driven content
+- **Note:** On Mahnoor's post day, Slack message tags her only (she is both author and approver)
+
 ---
 
 ## Assignment Logic
-- Posts rotate through 5 team members (Days 1–5, then repeat)
-- Mahnoor always tagged for review — she is NEVER the post author
+- Posts rotate through all 6 team members (Days 1–6, then repeat)
+- Mahnoor always tagged for review on others' posts
+- On Mahnoor's own post day (Day 6), Slack message tags her only
 - Posts tailored to each person's expertise and role level
 - Zeest (Senior) gets more strategic/opinion-led framing
 - Amina (Product Growth) gets metric-heavy, feature-focused posts
@@ -57,4 +64,4 @@
 ## Day Counter
 To find today's assigned poster, use this logic:
 - Day 1 of rotation started: 2026-06-16
-- Formula: days since start % 5 → 0=Waqas, 1=Zeest, 2=Junaid, 3=Amina, 4=Gul
+- Formula: days since start % 6 → 0=Waqas, 1=Zeest, 2=Junaid, 3=Amina, 4=Gul, 5=Mahnoor

@@ -17,13 +17,16 @@ generates authentic content, coordinates via Slack for review and approval.
 - **Gul Perwasha** `U0AUA6DG415` — Growth Manager
 
 ## Daily Schedule
-5-day rotation (started 2026-06-16):
+6-day rotation (started 2026-06-16):
 - Day 1: Waqas Tanveer
 - Day 2: Zeest Qureshi
 - Day 3: Junaid Ali
 - Day 4: Amina Tayyub
 - Day 5: Gul Perwasha
-- (Then repeat — day = days_since_2026-06-16 % 5)
+- Day 6: Mahnoor Tanweer Butt
+- (Then repeat — day = days_since_2026-06-16 % 6)
+
+Note: Mahnoor approves all posts. On her own post day, Slack message tags her only.
 
 ## Key Rules
 1. **Authenticity:** Posts sound like they're written by the team member, not generic AI
