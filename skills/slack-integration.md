@@ -16,6 +16,7 @@ Send draft LinkedIn posts to Slack, tag Mahnoor + assigned team member, and mana
 ### Step 1: Prepare the Message
 Before sending, have ready:
 - Draft post text (from post-generation.md)
+- Generated image file path (from image-generation.md skill) — optional but strongly recommended
 - Team member being tagged
 - Data sources used (e.g., "Based on user adoption metrics from Rumi")
 - Today's date
@@ -28,6 +29,7 @@ Format the draft so it's readable in Slack:
 Assigned to: [Team Member Name]
 Date: [Today]
 Based on: [Data source, e.g., "User adoption metrics from Rumi"]
+Image: [Chart / Stat card / Quote card / None] ← note image type if attached
 
 ---
 
@@ -54,7 +56,9 @@ Command:
 [Paste formatted message above]
 ```
 
-Expected: Message appears in Slack with mentions notifying both Mahnoor and team member.
+If an image was generated (from image-generation.md), attach it to the same message or reply immediately in the thread with the image file. Team member downloads the image from Slack when they're ready to post on LinkedIn.
+
+Expected: Message appears in Slack with mentions notifying both Mahnoor and team member. Image is visible in the thread.
 
 ### Step 4: Wait for Approval
 Monitor the Slack thread for reactions:
@@ -73,11 +77,13 @@ Once approved (✅ reaction):
 
 ### Step 6: Log in Memory
 Once posted, update memory.md with:
+- Include image filename so it's traceable
 ```markdown
 ## Post #[Number] ([Date])
 - Author: [Team Member]
 - Topic: [Topic]
 - Data used: [What metrics/findings]
+- Image: [Filename from output/posts/images/ or "None"]
 - Posted URL: [LinkedIn URL from team member]
 - Date posted: [Today]
 - Status: Awaiting engagement data (check in 3-7 days)

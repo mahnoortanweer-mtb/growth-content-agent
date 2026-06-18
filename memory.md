@@ -29,27 +29,34 @@ Post sounded authentic, data was current, team member approved without tweaks.
 ## Continuous Improvements
 (Document iterations and learnings)
 
-## In Progress (2026-06-17)
+## In Progress (2026-06-18)
 
 ### Image Generation Skill
-- **Status:** Design approved, not yet built
+- **Status:** ✅ Skill built — `skills/image-generation.md` written
+- **Brand guidelines:** ✅ `docs/brand-guidelines.md` written
 - **Design doc:** docs/superpowers/specs/2026-06-17-image-generation-design.md
 - **Two types:** Data viz (matplotlib) for metric posts, Canva branded graphics for wins/milestones
-- **3 Canva templates needed:** Stat card, quote card, announcement card
-- **Blocker:** Need to set up Taleemabad/Rumi branding in Canva Pro first
-- **Brand colors:** Rumi = coral/red accent + blue secondary + white bg. Taleemabad = TBD (confirm hex codes)
+- **Canva MCP:** Authentication attempted — tools not yet available in session (try fresh session)
+- **Remaining blocker:** Create 3 Canva templates (stat card, quote card, announcement card) in Canva Pro + fill in template IDs in skills/image-generation.md
+
+### Brand Colors (Confirm & Update)
+- Hex codes TBD — check Canva Pro brand kit, update in:
+  - `docs/brand-guidelines.md` (color table)
+  - `skills/image-generation.md` (matplotlib color constants)
 
 ### MCPs Connected
 - **Rumi:** rumi-db (PostgreSQL via Supabase, 82 tables, 37 post-relevant)
 - **Slack:** slack-rumi (Taleemabad workspace, #growth channel C0ATPQZV27M, bot U0BBGU4H2R0)
+- **Canva:** Authenticated via /mcp — confirm tools available in fresh session
 
 ### GitHub
 - Repo: https://github.com/mahnoortanweer-mtb/growth-content-agent
-- Branch: main, 11 commits
+- Branch: main
 
 ### Next Steps
-1. Set up Taleemabad/Rumi colors + logo in Canva Pro
-2. Create 3 LinkedIn templates in Canva
-3. Build image-generation.md skill
-4. Fill in real team member names + Slack IDs in docs/team-roster.md
-5. Run first real post end-to-end in Claude Code
+1. Open fresh Claude Code session → confirm Canva MCP tools are available
+2. Get hex codes from Canva Pro brand kit → update brand-guidelines.md + image-generation.md
+3. Create 3 Canva templates (stat card, quote card, announcement card)
+4. Add Canva template IDs to skills/image-generation.md template table
+5. Fill in real team member names + Slack IDs in docs/team-roster.md
+6. Run first real post end-to-end (Rumi query → post draft → image → Slack)

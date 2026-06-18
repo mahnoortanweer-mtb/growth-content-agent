@@ -57,6 +57,7 @@ Posts rotate through team members:
 ## Quick Reference
 - Rumi analysis: see skills/rumi-analysis.md
 - Post generation: see skills/post-generation.md
+- Image generation: see skills/image-generation.md
 - Slack workflow: see skills/slack-integration.md
 - Performance tracking: see skills/performance-tracking.md
 - Internet research: see skills/internet-research.md
@@ -64,3 +65,4 @@ Posts rotate through team members:
 - Trending topics: see docs/trending-topics.md
 - Post examples: see docs/post-templates.md
 - EdTech insights: see docs/internet-insights.md
+- Brand guidelines: see docs/brand-guidelines.md
