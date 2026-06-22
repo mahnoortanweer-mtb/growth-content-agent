@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Credentials — never commit
+.cursor/mcp.json
+.env
+*.env.local
